@@ -16,21 +16,10 @@
   <body>
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
-        <div
-          id="liveToast"
-          class="toast success hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          data-delay="4000"
+        <div id="liveToast" class="toast success hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000"
         >
           <div>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="toast"
-              aria-label="Close"
-            >
+            <button type="button" class="close"  data-dismiss="toast" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -40,21 +29,10 @@
     </div>
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
-        <div
-          id="liveToast"
-          class="toast error hide"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-          data-delay="4000"
+        <div id="liveToast" class="toast error hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000"
         >
           <div>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="toast"
-              aria-label="Close"
-            >
+            <button type="button" class="close" data-dismiss="toast" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -71,33 +49,14 @@
         />
         <h2>Yapılacaklar Listesi</h2>
         <form method="POST" id="todoForm">        
-          <input style="width: 1000px;" type="text" name="todo" for="todo" id="task" placeholder="Bugün ne yapacaksın?" />
-          <div style="align-items: center;">
-            <span onclick="newElement()" id="liveToastBtn" class="button"
+          <input style="margin-left: 100px;" type="text" name="todo" for="todo" id="task" placeholder="Bugün ne yapacaksın?" />
+            <span style="margin-left: 100px;" onclick="newElement()" id="liveToastBtn" class="button"
             >Ekle</span>
-          <span style="margin-left: 485px;" onclick="deleteALLToDo()" id="liveToastBtn" class="button"
+            <span style="margin-left: 260px;" onclick="deleteALLToDo()" id="liveToastBtn" class="button"
             >Hepsini Sil</span>
-          </div>
-
       </form>
       </div>
-
       <ul id="list" >
-        <li>3 Litre Su İç
-                    <span class="close">x</span>
-        </li>  
-        <li >Ödevleri Yap
-                    <span class="close" >x</span>
-        </li>
-        <li>En Az 3 Saat Kodlama Yap
-                    <span class="close" >x</span>
-        </li>
-        <li>Yemek Yap
-                    <span class="close" >x</span>
-        </li>
-        <li>50 Sayfa Kitap Oku
-                    <span class="close" >x</span>
-        </li>
       </ul>
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
