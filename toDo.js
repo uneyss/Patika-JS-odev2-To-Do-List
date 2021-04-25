@@ -1,7 +1,3 @@
-// Get List
-
-
-
 
 function newElement()
 {
@@ -25,23 +21,13 @@ function newElement()
     } 
     for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
-          var div = this.parentElement;
+          let div = this.parentElement;
           div.style.display = "none";
         };
       }
 }
 
-/* var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    var div = this.parentElement;
-    div.style.display = "none";
-  };
-} */
-
-
-var close = document.getElementsByClassName("close");
+let close = document.getElementsByClassName("close");
 for(let i=0; i<close.length; i++){
     close[i].addEventListener('click', () =>{
         close[i].parentElement.style.opacity = 0;
@@ -53,6 +39,44 @@ for(let i=0; i<close.length; i++){
     }
     )
 }
+
+let list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+      $(".alert").toast("show");
+    }
+  },
+  false
+);
+
+/* let body = document.querySelector("ul");
+eventListener();
+function eventListener(){
+    body.addEventListener('click',deleteTodo)
+}
+
+function deleteTodo(e){
+    if(e.target.className === "close"){
+        e.target.parentElement.parentElement.remove();
+        
+    }
+} */
+
+
+
+/* var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.display = "none";
+  };
+} */
+
+
 /* arr.push(close_2)
 const new_arr = arr.filter(new_item => new_item.lenght >0)
 console.log("close2", arr) */
