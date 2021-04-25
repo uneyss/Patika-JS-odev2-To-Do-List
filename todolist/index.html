@@ -14,6 +14,7 @@
     <title>Yapılacaklar Listesi</title>
   </head>
   <body>
+    <!-- Toast Section 1 Start  -->
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
         <div
@@ -38,6 +39,8 @@
         </div>
       </div>
     </div>
+    <!-- Toast Section 1 End  -->
+    <!-- Toast Section 2 Start  -->
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
         <div
@@ -62,6 +65,8 @@
         </div>
       </div>
     </div>
+    <!-- Toast Section 2 End  -->
+    <!-- Contanier Section Start -->
     <div class="container">
       <div class="header">
         <img
@@ -71,10 +76,25 @@
         />
         <h2>Yapılacaklar Listesi</h2>
         <form method="POST" id="todoForm">        
-          <input style="margin-left: 100px;" type="text" name="todo" for="todo" id="task" placeholder="Bugün ne yapacaksın?" />
-            <span style="margin-left: 100px;" onclick="newElement()" id="liveToastBtn" class="button"
+          <input 
+          style="margin-left: 100px;" 
+          type="text" name="todo" 
+          for="todo" 
+          id="task" 
+          placeholder="Bugün ne yapacaksın?" 
+          />
+            <span 
+            style="margin-left: 100px;" 
+            onclick="newElement()" 
+            id="liveToastBtn" 
+            class="button"
             >Ekle</span>
-            <span style="margin-left: 260px;" onclick="deleteALLToDo()" id="liveToastBtn" class="button"
+
+            <span 
+            style="margin-left: 260px;" 
+            onclick="deleteALLToDo()" 
+            id="liveToastBtn" 
+            class="button"
             >Hepsini Sil</span>
 
       </form>
@@ -82,19 +102,26 @@
 
       <ul id="list" >
         <li>3 Litre Su İç
-                    <span class="close">x</span>
+                    <span 
+                    class="close">
+                    x</span>
         </li>  
         <li >Ödevleri Yap
-                    <span class="close" >x</span>
+                    <span 
+                    class="close" >
+                    x</span>
         </li>
         <li>En Az 3 Saat Kodlama Yap
-                    <span class="close" >x</span>
+                    <span class="close">
+                    x</span>
         </li>
         <li>Yemek Yap
-                    <span class="close" >x</span>
+                    <span class="close">
+                    x</span>
         </li>
         <li>50 Sayfa Kitap Oku
-                    <span class="close" >x</span>
+                    <span class="close">
+                    x</span>
         </li>
       </ul>
       <script
@@ -108,6 +135,7 @@
         crossorigin="anonymous"
       ></script>
     </div>
+    <!-- Contanier Section End -->
   </body>
 </html>
 <script src="/toDo.js"></script>
