@@ -71,9 +71,14 @@
         />
         <h2>Yapılacaklar Listesi</h2>
         <form method="POST" id="todoForm">        
-          <input type="text" name="todo" for="todo" id="task" placeholder="Bugün ne yapacaksın?" />
-          <span onclick="newElement()" id="liveToastBtn" class="button"
+          <input style="width: 1000px;" type="text" name="todo" for="todo" id="task" placeholder="Bugün ne yapacaksın?" />
+          <div style="align-items: center;">
+            <span onclick="newElement()" id="liveToastBtn" class="button"
             >Ekle</span>
+          <span style="margin-left: 485px;" onclick="deleteALLToDo()" id="liveToastBtn" class="button"
+            >Hepsini Sil</span>
+          </div>
+
       </form>
       </div>
 
