@@ -17,14 +17,56 @@ function newElement()
         console.log("işlem geçerli")
         $(".success").toast("show");
         liNode.innerHTML = 
-            `<span class="close" onclick="myFunction()">x</span>`
+            `<span class="close">x</span>`
         
         liNode.appendChild(textnode) 
         listNode.appendChild(liNode);
 
     } 
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          div.style.display = "none";
+        };
+      }
 }
 
+/* var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.display = "none";
+  };
+} */
+
+
+var close = document.getElementsByClassName("close");
+for(let i=0; i<close.length; i++){
+    close[i].addEventListener('click', () =>{
+        close[i].parentElement.style.opacity = 0;
+        setTimeout(() => {
+            close[i].parentElement.style.display = "none";
+            close[i].parentElement.remove()
+        },500);
+        
+    }
+    )
+}
+/* arr.push(close_2)
+const new_arr = arr.filter(new_item => new_item.lenght >0)
+console.log("close2", arr) */
+
+/* const close = document.querySelectorAll(' ul span')
+const close_2 = document.querySelectorAll('ul li')
+let arr = [] */
+
+
+
+/* function myFunction() {
+    var list = document.getElementById("list");
+    list.removeChild(list.childNodes[0]);
+} */
 /* function deleteElement() 
 {
     let lis = document.querySelector('#list li');
@@ -32,16 +74,11 @@ function newElement()
         li.parentNode.removeChild(li);
     }
 } */
-
-function myFunction() {
-    var list = document.getElementById("list");
-    list.removeChild(list.childNodes[0]);
-  }
 /* function myFunction() {
     var ulElem = document.getElementById('list');
-
+    
     ulElem.removeChild(ulElem.childNodes[getSelection])
-  } */
+} */
 
 
 /*   var inputText = document.getElementById("txt"),
@@ -64,3 +101,4 @@ function myFunction() {
 }
  */
   
+
